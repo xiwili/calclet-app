@@ -1,0 +1,28 @@
+body {}
+
+#page {
+	height: 100%;
+	background-color: #ffffff;
+	display: grid;
+	grid-template-areas:
+		'leftcol leftdragbar main';
+	grid-template-columns: 6fr 6px 6fr;
+}
+
+#leftcol {
+	background-color: #ffffff;
+	overflow: auto;
+	grid-area: leftcol;
+}
+
+#leftdragbar {
+	background-color: #efefef;
+	grid-area: leftdragbar;
+	cursor: ew-resize;
+}
+
+#main {
+	background-color: #ffffff;
+	overflow: auto;
+	grid-area: main;
+}

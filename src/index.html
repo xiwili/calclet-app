@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="sidebar/sidebar.css">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <title>Calclet</title>
+  <script src="sidebar/sidebar.js"></script>
+  <script src="./ace-builds-1.4.12/src-min/ace.js"></script>
+  <script src="./numeric.js"></script>
+  <script src="./plotly-2.35.2.min.js"></script>
+</head>
+
+<body onresize="ResetColumnSizes()">
+  <div id="page" onmouseup="EndDrag()" onmousemove="OnDrag(event)">
+    <div id="leftcol">
+      <div id="editor" style="width: 100%; height: 100%; position: relative;"></div>
+    </div>
+    <div id="leftdragbar" onmousedown="StartLeftDrag()"></div>
+    <div id="main" style="width: 100%; height: 800px; background-color: #eee;">
+      <div id="outputWindow"></div>
+    </div>
+  </div>
+</body>
+<script src="main.js">
+</script>
+
+</html>
