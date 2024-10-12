@@ -32,13 +32,9 @@ fn main() {
                 ))
                 .add_submenu(Submenu::new(
                     "Help",
-                    Menu::new()
-                        .add_item(
-                            CustomMenuItem::new("about", "About").accelerator("cmdOrControl+A"),
-                        )
-                        .add_item(
-                            CustomMenuItem::new("docs", "Docs").accelerator("cmdOrControl+D"),
-                        ),
+                    Menu::new().add_item(
+                        CustomMenuItem::new("about", "About").accelerator("cmdOrControl+A"),
+                    ),
                 )),
         )
         .on_menu_event(|event| match event.menu_item_id() {
@@ -65,9 +61,6 @@ fn main() {
             }
             "about" => {
                 let _ = event.window().emit("menu-event", "about-event").unwrap();
-            }
-            "docs" => {
-                let _ = event.window().emit("menu-event", "docs-event").unwrap();
             }
             _ => {}
         })

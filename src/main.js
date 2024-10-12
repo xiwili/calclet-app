@@ -32,9 +32,6 @@ listen("menu-event", (e) => {
         case "about-event":
             About();
             break;
-        case "docs-event":
-            Docs();
-            break;
         default:
             break;
     }
